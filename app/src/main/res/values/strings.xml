@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">diceroller1</string>
-    <string name="bt_roll_name">ROLL</string>
-    <string name="bt_reset_name">RESET</string>
+    <string name="bt_roll_name">ROLL SUM</string>
+    <string name="bt_reset_name">ROLL RANDOM</string>
     <string name="header_name">VLSILVER</string>
     <string name="note_name">VALUE m</string>
 </resources>

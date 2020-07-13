@@ -18,16 +18,25 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
         supportActionBar?.hide()
         setContentView(R.layout.activity_main)
-        bt_roll.setOnClickListener{
-            sum = (2 .. 12).random()
-            val m = getRandom()
-            img_1.setImageResource(m.first)
-            img_2.setImageResource(m.second)
-            Toast.makeText(this, "SUM OF DICE: $sum", Toast.LENGTH_SHORT).show()
+        bt_roll_folowsum.setOnClickListener{
+            if (edt_1.text.isNotEmpty()) {
+                sum = edt_1.text.toString().toInt()
+                if ((sum >1) and (sum <=12)){
+                    val m = getRandom()
+                    img_1.setImageResource(m.first)
+                    img_2.setImageResource(m.second)
+                }
+                else {
+                    Toast.makeText(this, "Sum of dices in the range 2 to 12",Toast.LENGTH_SHORT).show()
+                }
+            }
+            else{
+                Toast.makeText(this, "Please fill in sum of dices",Toast.LENGTH_SHORT).show()
+            }
         }
-        bt_reset.setOnClickListener{
-            img_1.setImageResource(R.drawable.ic_launcher_foreground)
-            img_2.setImageResource(R.drawable.ic_launcher_foreground)
+        bt_roll_random.setOnClickListener{
+            img_1.setImageResource(getIndex((1..6).random()))
+            img_2.setImageResource(getIndex((1..6).random()))
         }
     }
 
@@ -55,3 +64,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+
