@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import android.view.Gravity
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,19 +28,18 @@ class MainActivity : AppCompatActivity() {
                     img_2.setImageResource(m.second)
                 }
                 else {
-                    Toast.makeText(this, "Sum of dices in the range 2 to 12",Toast.LENGTH_SHORT).show()
+                    showText("Sum of dices in range 2 to 12",Toast.LENGTH_SHORT,Triple(Gravity.CENTER,0,0))
                 }
             }
             else{
-                Toast.makeText(this, "Please fill in sum of dices",Toast.LENGTH_SHORT).show()
-            }
+                    showText("Please fill in Sum of dices",Toast.LENGTH_SHORT,Triple(Gravity.CENTER,0,0))
+        }
         }
         bt_roll_random.setOnClickListener{
             img_1.setImageResource(getIndex((1..6).random()))
             img_2.setImageResource(getIndex((1..6).random()))
         }
     }
-
     private fun getRandom():Pair<Int, Int>{
         if (sum>6) {
             rd1 = ((sum - 6) .. 6).random()
@@ -62,6 +62,11 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
+    }
+    private fun showText(text:String,duration: Int,triple: Triple<Int,Int,Int>){
+        val toast:Toast = Toast.makeText(this, text, duration)
+        toast.setGravity(triple.first,triple.second,triple.third)
+        toast.show()
     }
 }
 
