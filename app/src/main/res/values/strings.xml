@@ -1,7 +1,11 @@
 <resources>
-    <string name="app_name">diceroller1</string>
-    <string name="bt_roll_name">ROLL SUM</string>
-    <string name="bt_reset_name">ROLL RANDOM</string>
-    <string name="header_name">VLSILVER</string>
-    <string name="note_name">VALUE m</string>
+    <string name="app_name">mykotlin</string>
+    <string name="bt_rollsum_name_activity">ROLL SUM</string>
+    <string name="bt_rollrandom_name_activity">ROLL RANDOM</string>
+    <string name="bt_next_1">NEXT</string>
+    <string name="bt_back_1">BACK</string>
+    <string name="name_activity">Diceroller</string>
+    <string name="name_activity2">About My Kotlin App</string>
+    <string name="name_discription_app">\n1. Introduce
+    \n2. Dice roller app</string>
 </resources>
