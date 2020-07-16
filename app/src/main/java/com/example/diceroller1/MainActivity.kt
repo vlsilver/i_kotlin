@@ -1,5 +1,6 @@
 package com.example.diceroller1
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.Gravity
 import android.view.ScaleGestureDetector
+import android.view.inputmethod.InputMethodManager
 import android.widget.ScrollView
 
 class MainActivity : AppCompatActivity() {
@@ -46,6 +48,8 @@ class MainActivity : AppCompatActivity() {
                     Triple(Gravity.CENTER, 0, 0)
                 )
             }
+            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                    inputMethodManager.hideSoftInputFromWindow(bt_roll_folowsum.windowToken, 0)
         }
         bt_roll_random.setOnClickListener {
             img_1.setImageResource(getIndex((1..6).random()))

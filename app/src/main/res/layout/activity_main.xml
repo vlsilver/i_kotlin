@@ -51,6 +51,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:id="@+id/bt_roll_folowsum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -59,6 +60,7 @@
                     android:textStyle="bold"></Button>
 
                 <Button
+                    style="@style/Widget.AppCompat.Button.Colored"
                     android:id="@+id/bt_roll_random"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -67,22 +69,25 @@
                     android:textStyle="bold"></Button>
             </LinearLayout>
         </LinearLayout>
+
         <TextView
-            android:fontFamily="@font/roboto"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Please fill in the sum of dices:"
+            android:fontFamily="@font/roboto"
+            android:padding="8dp"
+            android:text="SUM YOU WANT?"
             android:textColor="@color/colorHeader"
-            android:textStyle="italic"
-            android:padding="8dp">
-        </TextView>
+            android:textStyle="italic"></TextView>
+
         <EditText
             android:id="@+id/edt_1"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorEditext"
+            android:fontFamily="@font/roboto"
+            android:hint="Please fill in sum of dices!"
             android:inputType="number"
-            android:background="@color/colorEditext">
-        </EditText>
+            android:padding="8dp"></EditText>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -90,16 +95,18 @@
             android:layout_margin="@dimen/layout_margin">
 
             <Button
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:id="@+id/bt_back_2"
-                android:layout_width="64dp"
+                android:layout_width="54dp"
                 android:layout_height="32dp"
                 android:fontFamily="@font/roboto"
                 android:text="@string/bt_back_1"
                 android:textSize="10sp"></Button>
 
             <Button
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:id="@+id/bt_next_2"
-                android:layout_width="64dp"
+                android:layout_width="54dp"
                 android:layout_height="32dp"
                 android:layout_gravity="end"
                 android:fontFamily="@font/roboto"

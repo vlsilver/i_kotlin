@@ -1,65 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2">
+    tools:context=".MainActivity2"
+    android:orientation="vertical"
+    android:background="@color/colorBackground">>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/txt_name1"
+                style="@style/NameStyleHeader"
+                android:layout_height="match_parent"
+                android:paddingTop="38dp"
+                android:text="@string/name_activity2">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/img_start"
+                android:paddingLeft="32dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher_foreground">
+            </ImageView>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edt_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="What name do you want!">
+        </EditText>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="0dp"
-        android:background="@color/colorBackground">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+        <Button
+            android:id="@+id/bt_done"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="54dp"
+            android:layout_height="32dp"
+            android:textSize="10sp"
+            android:fontFamily="@font/roboto"
+            android:text="DONE">
+        </Button>
 
         <TextView
-            style="@style/NameStyleHeader"
-            android:padding="@dimen/small_padding"
-            android:layout_margin="@dimen/layout_margin"
-            android:text="@string/name_activity2"></TextView>
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:paddingLeft="24dp"
+            android:text=""
+            android:visibility="gone">
+        </TextView>
+    </LinearLayout>
 
         <ScrollView
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
             android:id="@+id/bio_scroll"
             android:layout_width="match_parent"
-            android:layout_height="492dp"
-            android:layout_margin="@dimen/layout_margin"
-            android:padding="@dimen/small_padding">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/bio_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/layout_margin"
                 android:fontFamily="@font/roboto"
-                android:padding="@dimen/small_padding"
-                android:text="@string/name_discription_app"></TextView>
+                android:text="@string/name_discription_app"
+                android:paddingLeft="16dp">
+            </TextView>
         </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/small_padding"
-            android:layout_margin="@dimen/layout_margin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin">
 
-            <Button
-                android:id="@+id/bt_back_1"
-                android:layout_width="64dp"
-                android:layout_height="32dp"
-                android:fontFamily="@font/roboto"
-                android:text="@string/bt_back_1"
-                android:textSize="10sp"></Button>
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:id="@+id/bt_back_1"
+            android:layout_width="54dp"
+            android:layout_height="32dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/bt_back_1"
+            android:textSize="10sp"></Button>
 
-            <Button
-                android:id="@+id/bt_next_1"
-                android:layout_width="64dp"
-                android:layout_height="32dp"
-                android:layout_gravity="end"
-                android:fontFamily="@font/roboto"
-                android:text="@string/bt_next_1"
-                android:textSize="10sp"></Button>
-        </LinearLayout>
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:id="@+id/bt_next_1"
+            android:layout_width="54dp"
+            android:layout_height="32dp"
+            android:layout_gravity="end"
+            android:fontFamily="@font/roboto"
+            android:text="@string/bt_next_1"
+            android:textSize="10sp"></Button>
     </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
