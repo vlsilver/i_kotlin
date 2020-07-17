@@ -1,11 +1,24 @@
 <resources>
     <string name="app_name">mykotlin</string>
-    <string name="bt_rollsum_name_activity">ROLL SUM</string>
-    <string name="bt_rollrandom_name_activity">ROLL RANDOM</string>
-    <string name="bt_next_1">NEXT</string>
-    <string name="bt_back_1">BACK</string>
-    <string name="name_activity">Diceroller</string>
-    <string name="name_activity2">About My Kotlin App</string>
-    <string name="name_discription_app">\n1. Introduce
-    \n2. Dice roller app</string>
+    <string name="bt_rollsum_main">ROLL SUM</string>
+    <string name="bt_rollrandom_main">ROLL R.DOM</string>
+    <string name="bt_next">NEXT</string>
+    <string name="bt_back">BACK</string>
+    <string name="bt_done_2">DONE</string>
+    <string name="bt_set_all_3">SET ALL</string>
+    <string name="bt_reset_3">RESET</string>
+    <string name="name_activity_main">Diceroller</string>
+    <string name="name_activity_2">About My Kotlin App</string>
+    <string name="name_activity_3">ColorMyMy</string>
+    <string name="name_textview_main">Sum you want!</string>
+    <string name="name_hint_edt_1_2">What name do you want!!</string>
+    <string name="name_hint_edt_1_main">Please fill in your sum!</string>
+    <string name="name_box_one_3">Box One</string>
+    <string name="name_box_two_3">Box Two</string>
+    <string name="name_box_three_3">Box Three</string>
+    <string name="name_list_feature_app_2">\n1. Introduce
+    \n2. ColorMyMy
+    \n3. Dice Roller App</string>
+    <string name="name_box_four_3">Box Four</string>
+    <string name="name_box_five_3">Box Five</string>
 </resources>

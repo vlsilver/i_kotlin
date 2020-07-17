@@ -9,9 +9,7 @@ import android.view.WindowManager
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import android.view.Gravity
-import android.view.ScaleGestureDetector
 import android.view.inputmethod.InputMethodManager
-import android.widget.ScrollView
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         )
         supportActionBar?.hide()
         setContentView(R.layout.activity_main)
-        bt_roll_folowsum.setOnClickListener {
+        bt_setall_3.setOnClickListener {
             if (edt_1.text.isNotEmpty()) {
                 sum = edt_1.text.toString().toInt()
                 if ((sum > 1) and (sum <= 12)) {
@@ -49,14 +47,14 @@ class MainActivity : AppCompatActivity() {
                 )
             }
             val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    inputMethodManager.hideSoftInputFromWindow(bt_roll_folowsum.windowToken, 0)
+                    inputMethodManager.hideSoftInputFromWindow(bt_setall_3.windowToken, 0)
         }
-        bt_roll_random.setOnClickListener {
+        bt_reset_3.setOnClickListener {
             img_1.setImageResource(getIndex((1..6).random()))
             img_2.setImageResource(getIndex((1..6).random()))
         }
-        bt_back_2.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
+        bt_back_main.setOnClickListener {
+            val intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
         }
     }

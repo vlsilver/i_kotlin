@@ -17,26 +17,28 @@ class MainActivity2 : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
         supportActionBar?.hide()
-        bt_next_1.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+        bt_next_2.setOnClickListener {
+            val intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
         }
         bt_done.setOnClickListener {
-            addNickname(it)
+            addNickname(bt_done)
         }
-        bt_back_1.setOnClickListener {
+        bt_back_2.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
-        txt_name1.setOnClickListener{
+        nickname_text.setOnClickListener{
             updateNickname(it)
         }
     }
     private fun addNickname(view: View){
         txt_name1.text = edt_2.text
+        nickname_text.text = edt_2.text
 //        Hide DONE Button and edittext
-        bt_done.visibility = View.GONE
         edt_2.visibility = View.GONE
+        view.visibility = View.GONE
+        nickname_text.visibility = View.VISIBLE
 //        Hide keyboard
         val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
@@ -44,6 +46,8 @@ class MainActivity2 : AppCompatActivity() {
     private fun updateNickname(view:View){
         edt_2.visibility = View.VISIBLE
         bt_done.visibility = View.VISIBLE
-//        txt_name1.requestFocus()
+        view.visibility = View.GONE
+        edt_2.requestFocus()
+
     }
 }
