@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyimageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <TextView
+            android:id="@+id/box_seven_text_3"
+            style="@style/whiteBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/name_box_seven_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box_six_text_3"
+            app:layout_constraintTop_toBottomOf="@+id/box_five_text_3"></TextView>
+
+
+        <TextView
+            android:id="@+id/label_text"
+            style="@style/Text_document"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginStart="@dimen/margin_wide"
+            android:gravity="center_vertical"
+            android:text="@string/name_label_text_3"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/info_text_3"
+            style="@style/Text_document"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/name_description_3"
+            app:layout_constraintBaseline_toBaselineOf="@+id/label_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/label_text"
+            app:layout_constraintVertical_bias="0.0"></TextView>
+
+        <TextView
+            android:id="@+id/box_two_text_3"
+            style="@style/whiteBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/name_box_two_3"
+            app:layout_constraintBottom_toTopOf="@+id/box_four_text_3"
+            app:layout_constraintEnd_toStartOf="@+id/box_three_text_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_text">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/box_three_text_3"
+            style="@style/whiteBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/name_box_three_3"
+            app:layout_constraintBottom_toTopOf="@+id/box_five_text_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box_two_text_3"
+            app:layout_constraintTop_toBottomOf="@+id/label_text"></TextView>
+
+        <TextView
+            android:id="@+id/box_four_text_3"
+            style="@style/whiteBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/name_box_four_3"
+            app:layout_constraintBottom_toTopOf="@+id/box_six_text_3"
+            app:layout_constraintEnd_toStartOf="@+id/box_five_text_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box_two_text_3"></TextView>
+
+        <TextView
+            android:id="@+id/box_six_text_3"
+            style="@style/whiteBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/name_box_five_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/box_seven_text_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/box_four_text_3"></TextView>
+
+        <TextView
+            android:id="@+id/box_five_text_3"
+            style="@style/whiteBox"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/name_box_six_3"
+            app:layout_constraintBottom_toTopOf="@+id/box_seven_text_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/box_four_text_3"
+            app:layout_constraintTop_toBottomOf="@+id/box_three_text_3"></TextView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

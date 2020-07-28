@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mynavi"
+    app:startDestination="@id/aboutFragmentTitle">
+
+    <fragment
+        android:id="@+id/aboutFragmentTitle"
+        android:name="com.example.vlsilverkotlin.AboutFragmentTitle"
+        android:label="about_fragment_title"
+        tools:layout="@layout/about_fragment_title" >
+        <action
+            android:id="@+id/action_aboutFragmentTitle_to_triviaFragmentTitle"
+            app:destination="@id/triviaFragmentTitle" />
+        <action
+            android:id="@+id/action_aboutFragmentTitle_to_mymycolorFragment"
+            app:destination="@id/mymycolorFragment" />
+        <action
+            android:id="@+id/action_aboutFragmentTitle_to_dicerollerFragment"
+            app:destination="@id/dicerollerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dicerollerFragment"
+        android:name="com.example.vlsilverkotlin.DicerollerFragment"
+        android:label="diceroller_fragment"
+        tools:layout="@layout/diceroller_fragment" />
+    <fragment
+        android:id="@+id/mymycolorFragment"
+        android:name="com.example.vlsilverkotlin.MyimageFragment"
+        android:label="mymycolor_fragment"
+        tools:layout="@layout/myimage_fragment" />
+    <fragment
+        android:id="@+id/triviaFragmentTitle"
+        android:name="com.example.vlsilverkotlin.TriviaFragmentTitle"
+        android:label="trivia_fragment_title"
+        tools:layout="@layout/trivia_fragment_title" >
+        <action
+            android:id="@+id/action_triviaFragmentTitle_to_triviaFragmentRules2"
+            app:destination="@id/triviaFragmentRules"
+            app:popUpTo="@id/triviaFragmentGame"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_triviaFragmentTitle_to_triviaFragmentGame"
+            app:destination="@id/triviaFragmentGame" />
+        <action
+            android:id="@+id/action_triviaFragmentTitle_to_triviaFragmentAbout2"
+            app:destination="@id/triviaFragmentAbout"
+            app:popUpTo="@id/triviaFragmentGame"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/triviaFragmentRules"
+        android:name="com.example.android.navigation.TriviaFragmentRules"
+        android:label="trivia_fragment_rules"
+        tools:layout="@layout/trivia_fragment_rules" >
+        <action
+            android:id="@+id/action_triviaFragmentRules_to_triviaFragmentGame"
+            app:destination="@id/triviaFragmentGame"
+            app:popUpTo="@id/triviaFragmentRules"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/triviaFragmentGame"
+        android:name="com.example.vlsilverkotlin.TriviaFragmentGame"
+        android:label="trivia_fragment_game"
+        tools:layout="@layout/trivia_fragment_game" >
+        <action
+            android:id="@+id/action_triviaFragmentGame_to_triviaFragmentGameover"
+            app:destination="@id/triviaFragmentGameover"
+            app:popUpTo="@id/triviaFragmentGame"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_triviaFragmentGame_to_triviaFragmentGamewon"
+            app:destination="@id/triviaFragmentGamewon"
+            app:popUpTo="@id/triviaFragmentGame"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/triviaFragmentGameover"
+        android:name="com.example.vlsilverkotlin.TriviaFragmentGameover"
+        android:label="trivia_fragment_gameover"
+        tools:layout="@layout/trivia_fragment_gameover" >
+        <action
+            android:id="@+id/action_triviaFragmentGameover_to_triviaFragmentGame"
+            app:destination="@id/triviaFragmentGame"
+            app:popUpTo="@id/triviaFragmentGameover"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/triviaFragmentGamewon"
+        android:name="com.example.vlsilverkotlin.TriviaFragmentGamewon"
+        android:label="trivia_fragment_gamewon"
+        tools:layout="@layout/trivia_fragment_gamewon" >
+        <action
+            android:id="@+id/action_triviaFragmentGamewon_to_triviaFragmentGame"
+            app:destination="@id/triviaFragmentGame"
+            app:popUpTo="@id/triviaFragmentGamewon"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/triviaFragmentAbout"
+        android:name="com.example.vlsilverkotlin.TriviaFragmentAbout"
+        android:label="trivia_fragment_about"
+        tools:layout="@layout/trivia_fragment_about" >
+        <action
+            android:id="@+id/action_triviaFragmentAbout_to_triviaFragmentGame"
+            app:destination="@id/triviaFragmentGame"
+            app:popUpTo="@id/triviaFragmentAbout"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

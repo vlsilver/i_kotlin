@@ -6,4 +6,6 @@
     <color name="colorHeader">#000000</color>
     <color name="colorBackground">#EEEEEE</color>
     <color name="colorEditext">#999999</color>
+    <color name="gameOverBackground">#FFFFFF</color>
+    <color name="youWinBackground">#B7F8C9</color>
 </resources>
