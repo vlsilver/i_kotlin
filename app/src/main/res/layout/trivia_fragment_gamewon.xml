@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/button_padding"
             android:paddingEnd="@dimen/button_padding"
-            android:text="Next Match"
+            android:text="@string/next_match"
             android:textColor="#000000"
             android:background="#ffffff"
             android:textSize="@dimen/button_text_size"
@@ -35,12 +35,27 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="@dimen/horizontal_margin"
             android:layout_marginBottom="@dimen/vertical_margin"
+            android:contentDescription="@android:string/cancel"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/nextMatchButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/you_win" />
+
+        <EditText
+            android:id="@+id/editText_numQuestions"
+            style="@style/EditText"
+            android:layout_width="306dp"
+            android:layout_height="46dp"
+            android:autofillHints=""
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="@string/please_fill_in_number_of_question_default_5"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nextMatchButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

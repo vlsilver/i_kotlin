@@ -18,6 +18,7 @@
             android:layout_marginStart="@dimen/horizontal_margin"
             android:layout_marginEnd="@dimen/horizontal_margin"
             android:layout_marginBottom="8dp"
+            android:contentDescription="@android:string/cancel"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/tryAgainButton"
             app:layout_constraintEnd_toEndOf="parent"
@@ -44,5 +45,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/gameOverFragment" />
+
+        <EditText
+            android:id="@+id/editText_numQuestions"
+            style="@style/EditText"
+            android:layout_width="306dp"
+            android:layout_height="46dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/please_fill_in_number_of_question_default_5"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tryAgainButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -34,4 +34,5 @@ class MainActivity : AppCompatActivity() {
         val nav = this.findNavController(R.id.myFragment)
         return NavigationUI.navigateUp(nav,drawerLayout)
     }
+
 }

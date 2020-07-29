@@ -42,5 +42,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/android_trivia" />
 
+        <EditText
+            android:id="@+id/editText_numQuestions"
+            style="@style/EditText"
+            android:layout_width="306dp"
+            android:layout_height="46dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/please_fill_in_number_of_question_default_5"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playButton" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

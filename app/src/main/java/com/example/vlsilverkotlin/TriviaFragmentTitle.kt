@@ -1,18 +1,18 @@
 package com.example.vlsilverkotlin
 
+import android.content.Context
 import android.os.Bundle
 import android.view.*
+import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.Navigation
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.NavigationUI
 import com.example.vlsilverkotlin.databinding.TriviaFragmentTitleBinding
 
 
 class TriviaFragmentTitle : Fragment() {
+    private var numQuestion = 5
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,8 +27,19 @@ class TriviaFragmentTitle : Fragment() {
         setHasOptionsMenu(true)
         setTilteActionbar()
         binding.playButton.setOnClickListener {
-            it.findNavController().navigate(R.id.action_triviaFragmentTitle_to_triviaFragmentGame)
+            hideKeyboard()
+            if (binding.editTextNumQuestions.text.isNotEmpty()) {
+                numQuestion = binding.editTextNumQuestions.text.toString().toInt()
+            }
+            it.findNavController().navigate(
+                TriviaFragmentTitleDirections.actionTriviaFragmentTitleToTriviaFragmentGame(
+                    0,
+                    0,
+                    numQuestion
+                )
+            )
         }
+        binding.editTextNumQuestions.requestFocus()
         return binding.root
     }
 
@@ -42,11 +53,24 @@ class TriviaFragmentTitle : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(
-            item,
-            view!!.findNavController()
-        ) or super.onOptionsItemSelected(item)
+        when (item.itemId) {
+            R.id.triviaFragmentAbout -> {
+                view!!.findNavController()
+                    .navigate(TriviaFragmentTitleDirections.actionTriviaFragmentTitleToTriviaFragmentAbout2())
+            }
+            R.id.triviaFragmentRules -> {
+                view!!.findNavController()
+                    .navigate(TriviaFragmentTitleDirections.actionTriviaFragmentTitleToTriviaFragmentRules())
+            }
+        }
+//        return NavigationUI.onNavDestinationSelected(
+//            item,
+//            view!!.findNavController()
+//        ) or
+        return super.onOptionsItemSelected(item)
     }
-
-
+    private fun hideKeyboard(){
+        val inputMethodManager = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(view?.windowToken, 0)
+    }
 }

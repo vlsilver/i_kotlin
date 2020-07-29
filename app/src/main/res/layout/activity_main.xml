@@ -14,7 +14,8 @@
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:navGraph="@navigation/mynavi"></fragment>
+            app:navGraph="@navigation/mynavi"
+           app:defaultNavHost="true"></fragment>
 
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/menu_drawer"

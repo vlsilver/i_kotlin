@@ -36,18 +36,14 @@
         android:label="trivia_fragment_title"
         tools:layout="@layout/trivia_fragment_title" >
         <action
-            android:id="@+id/action_triviaFragmentTitle_to_triviaFragmentRules2"
-            app:destination="@id/triviaFragmentRules"
-            app:popUpTo="@id/triviaFragmentGame"
-            app:popUpToInclusive="false" />
+            android:id="@+id/action_triviaFragmentTitle_to_triviaFragmentRules"
+            app:destination="@id/triviaFragmentRules" />
         <action
             android:id="@+id/action_triviaFragmentTitle_to_triviaFragmentGame"
             app:destination="@id/triviaFragmentGame" />
         <action
             android:id="@+id/action_triviaFragmentTitle_to_triviaFragmentAbout2"
-            app:destination="@id/triviaFragmentAbout"
-            app:popUpTo="@id/triviaFragmentGame"
-            app:popUpToInclusive="false" />
+            app:destination="@id/triviaFragmentAbout" />
     </fragment>
     <fragment
         android:id="@+id/triviaFragmentRules"
@@ -75,6 +71,15 @@
             app:destination="@id/triviaFragmentGamewon"
             app:popUpTo="@id/triviaFragmentGame"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="totalQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="totalCorrect"
+            app:argType="integer" />
+        <argument
+            android:name="numQuestion"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/triviaFragmentGameover"
@@ -86,6 +91,12 @@
             app:destination="@id/triviaFragmentGame"
             app:popUpTo="@id/triviaFragmentGameover"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/triviaFragmentGamewon"
@@ -97,6 +108,12 @@
             app:destination="@id/triviaFragmentGame"
             app:popUpTo="@id/triviaFragmentGamewon"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/triviaFragmentAbout"
