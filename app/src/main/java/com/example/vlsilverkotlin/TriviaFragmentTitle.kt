@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.example.vlsilverkotlin.databinding.TriviaFragmentTitleBinding
+import timber.log.Timber
 
 
 class TriviaFragmentTitle : Fragment() {
@@ -25,7 +26,7 @@ class TriviaFragmentTitle : Fragment() {
             false
         )
         setHasOptionsMenu(true)
-        setTilteActionbar()
+        (activity as AppCompatActivity).supportActionBar?.title = "Trivia"
         binding.playButton.setOnClickListener {
             hideKeyboard()
             if (binding.editTextNumQuestions.text.isNotEmpty()) {
@@ -41,10 +42,6 @@ class TriviaFragmentTitle : Fragment() {
         }
         binding.editTextNumQuestions.requestFocus()
         return binding.root
-    }
-
-    private fun setTilteActionbar() {
-        (activity as AppCompatActivity).supportActionBar?.title = "Trivia"
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

@@ -25,7 +25,6 @@ class TriviaFragmentAbout : Fragment() {
             container,
             false
         )
-        setTilteActionbar()
         binding.playButton.setOnClickListener {
             hideKeyboard()
             if(binding.editTextNumQuestions.text.isNotEmpty()){
@@ -40,12 +39,10 @@ class TriviaFragmentAbout : Fragment() {
             )
         }
         binding.editTextNumQuestions.requestFocus()
+        (activity as AppCompatActivity).supportActionBar?.title = "Trivia"
         return binding.root
     }
 
-    private fun setTilteActionbar() {
-        (activity as AppCompatActivity).supportActionBar?.title = "Trivia"
-    }
     private fun hideKeyboard(){
         val inputMethodManager = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view?.windowToken, 0)

@@ -17,4 +17,8 @@
         android:id="@+id/triviaFragmentTitle"
         android:icon="@drawable/nav_header"
         android:title="@string/name_trivia_app"></item>
+    <item
+        android:id="@+id/dessertClickFragment"
+        android:icon="@drawable/ic_android_black_24dp"
+        android:title="@string/dessert_click_app" />
 </menu>

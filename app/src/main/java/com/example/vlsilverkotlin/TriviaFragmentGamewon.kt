@@ -41,14 +41,10 @@ class TriviaFragmentGamewon : Fragment() {
             "NumCorrect: ${args.numCorrect}, NumQuestions:${args.numQuestions}",
             Toast.LENGTH_SHORT
         ).show()
-        setTilteActionbar()
+        (activity as AppCompatActivity).supportActionBar?.title = "Trivia"
         setHasOptionsMenu(true)
         binding.editTextNumQuestions.requestFocus()
         return binding.root
-    }
-
-    private fun setTilteActionbar() {
-        (activity as AppCompatActivity).supportActionBar?.title = "Trivia"
     }
 
     private fun shareIntent(): Intent {

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.vlsilverkotlin.AboutFragmentTitle">
+    tools:context="com.example.vlsilverkotlin.MainFragmentTitle">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,13 +20,15 @@
         <ScrollView
             android:layout_height="match_parent"
             android:layout_width="wrap_content">
+
             <TextView
-            style="@style/Text_document"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/name_about_myapp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="24dp"></TextView>
+                style="@style/Text_document"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:text="@string/name_about_myapp"
+                android:textColor="#000000"></TextView>
         </ScrollView>
     </LinearLayout>
 </layout>

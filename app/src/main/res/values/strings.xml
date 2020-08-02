@@ -11,7 +11,7 @@
         "\n\n\nThank you! Have a good time!"</string>
 
 
-    <string name="app_name">mykotlin</string>
+    <string name="app_name">Mapps</string>
     <string name="bt_rollsum_main">ROLL SUM</string>
     <string name="bt_rollrandom_main">ROLL R.DOM</string>
     <string name="bt_next">NEXT</string>
@@ -27,10 +27,10 @@
     <string name="name_hint_edt_1_2">What is app?</string>
     <string name="name_hint_edt_1_main">Please fill in your sum!</string>
     <string name="name_box_one_3">Box One</string>
-    <string name="name_box_two_3">Box Two</string>
+    <string name="name_box_two_3">My Image</string>
     <string name="name_box_three_3">Box Three</string>
     <string name="name_label_text_3">How to play:</string>
-    <string name="name_description_3">Tap the sreen and buttons</string>
+    <string name="name_description_3">Tap the sreen</string>
     <string name="name_list_feature_app_2">\n1. Introduce
     \n2. ColorMyMy
     \n3. Dice Roller App
@@ -149,4 +149,8 @@
     <string name="share_success_text">I mastered AndroidTrivia with %1$d/%2$d correct questions!</string>
     <string name="share">Share</string>
     <string name="please_fill_in_number_of_question_default_5">Please fill in number of question, default:5!!</string>
+    <string name="dessert_click_app">Dessert Click App</string>
+    <string name="dessert_sold">Desserts Sold</string>
+    <string name="share_text">I\'ve clicked %1$d Desserts for a total of %2$d$ #AndroidDessertClicker</string>
+    <string name="sharing_not_available">Sharing Not Available</string>
 </resources>

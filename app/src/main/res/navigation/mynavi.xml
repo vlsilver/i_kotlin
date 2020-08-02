@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/aboutFragmentTitle"
-        android:name="com.example.vlsilverkotlin.AboutFragmentTitle"
-        android:label="about_fragment_title"
-        tools:layout="@layout/about_fragment_title" >
+        android:name="com.example.vlsilverkotlin.MainFragmentTitle"
+        android:label="My App"
+        tools:layout="@layout/about_fragment_title">
         <action
             android:id="@+id/action_aboutFragmentTitle_to_triviaFragmentTitle"
             app:destination="@id/triviaFragmentTitle" />
@@ -19,22 +19,25 @@
         <action
             android:id="@+id/action_aboutFragmentTitle_to_dicerollerFragment"
             app:destination="@id/dicerollerFragment" />
+        <action
+            android:id="@+id/action_aboutFragmentTitle_to_dessertClickFragment"
+            app:destination="@id/dessertClickFragment" />
     </fragment>
     <fragment
         android:id="@+id/dicerollerFragment"
         android:name="com.example.vlsilverkotlin.DicerollerFragment"
-        android:label="diceroller_fragment"
+        android:label="Diceroller App"
         tools:layout="@layout/diceroller_fragment" />
     <fragment
         android:id="@+id/mymycolorFragment"
         android:name="com.example.vlsilverkotlin.MyimageFragment"
-        android:label="mymycolor_fragment"
+        android:label="Mymy Image"
         tools:layout="@layout/myimage_fragment" />
     <fragment
         android:id="@+id/triviaFragmentTitle"
         android:name="com.example.vlsilverkotlin.TriviaFragmentTitle"
-        android:label="trivia_fragment_title"
-        tools:layout="@layout/trivia_fragment_title" >
+        android:label="Trivia App"
+        tools:layout="@layout/trivia_fragment_title">
         <action
             android:id="@+id/action_triviaFragmentTitle_to_triviaFragmentRules"
             app:destination="@id/triviaFragmentRules" />
@@ -47,9 +50,9 @@
     </fragment>
     <fragment
         android:id="@+id/triviaFragmentRules"
-        android:name="com.example.android.navigation.TriviaFragmentRules"
-        android:label="trivia_fragment_rules"
-        tools:layout="@layout/trivia_fragment_rules" >
+        android:name="com.example.vlsilverkotlin.TriviaFragmentRules"
+        android:label=" Trivia App"
+        tools:layout="@layout/trivia_fragment_rules">
         <action
             android:id="@+id/action_triviaFragmentRules_to_triviaFragmentGame"
             app:destination="@id/triviaFragmentGame"
@@ -118,12 +121,16 @@
     <fragment
         android:id="@+id/triviaFragmentAbout"
         android:name="com.example.vlsilverkotlin.TriviaFragmentAbout"
-        android:label="trivia_fragment_about"
-        tools:layout="@layout/trivia_fragment_about" >
+        android:label="Trivia App"
+        tools:layout="@layout/trivia_fragment_about">
         <action
             android:id="@+id/action_triviaFragmentAbout_to_triviaFragmentGame"
             app:destination="@id/triviaFragmentGame"
             app:popUpTo="@id/triviaFragmentAbout"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/dessertClickFragment"
+        android:name="com.example.vlsilverkotlin.DessertClickFragment"
+        android:label="DessertClickFragment" />
 </navigation>

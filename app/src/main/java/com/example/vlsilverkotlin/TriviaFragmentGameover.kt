@@ -42,7 +42,7 @@ class TriviaFragmentGameover : Fragment() {
                 Toast.LENGTH_SHORT
             ).show()
             setHasOptionsMenu(true)
-            setTilteActionbar()
+            (activity as AppCompatActivity).supportActionBar?.title = "Trivia"
             binding.editTextNumQuestions.requestFocus()
             return binding.root
         }
@@ -58,7 +58,6 @@ class TriviaFragmentGameover : Fragment() {
         }
 
         private fun setTilteActionbar() {
-            (activity as AppCompatActivity).supportActionBar?.title = "Trivia"
         }
 
         override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

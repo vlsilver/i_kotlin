@@ -1,4 +1,4 @@
-package com.example.android.navigation
+package com.example.vlsilverkotlin
 
 import android.content.Context
 import android.os.Bundle
@@ -10,7 +10,6 @@ import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import com.example.vlsilverkotlin.R
 import com.example.vlsilverkotlin.databinding.TriviaFragmentRulesBinding
 
 class TriviaFragmentRules : Fragment() {
@@ -26,7 +25,7 @@ class TriviaFragmentRules : Fragment() {
             false
         )
 
-        setTilteActionbar()
+        (activity as AppCompatActivity).supportActionBar?.title = "Trivia"
         binding.playButton.setOnClickListener {
             hideKeyboard()
             if (binding.editTextNumQuestions.text.isNotEmpty()) {
@@ -45,9 +44,6 @@ class TriviaFragmentRules : Fragment() {
         return binding.root
     }
 
-    private fun setTilteActionbar() {
-        (activity as AppCompatActivity).supportActionBar?.title = "Trivia"
-    }
     private fun hideKeyboard(){
         val inputMethodManager = activity?.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view?.windowToken, 0)

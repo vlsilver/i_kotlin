@@ -30,7 +30,7 @@ class TriviaFragmentGame : Fragment() {
         setQuestion()
         binding.game = this
         binding.submitButton.setOnClickListener { view: View ->
-            var answerIndexUser: Int = 0
+            var answerIndexUser = 0
             when (binding.questionRadioGroup.checkedRadioButtonId) {
                 R.id.secondAnswerRadioButton -> answerIndexUser = 1
                 R.id.thirdAnswerRadioButton -> answerIndexUser = 2

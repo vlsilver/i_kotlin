@@ -8,4 +8,7 @@
     <color name="colorEditext">#999999</color>
     <color name="gameOverBackground">#FFFFFF</color>
     <color name="youWinBackground">#B7F8C9</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#6ab343</color>
+    <color name="grey">#99000000</color>
 </resources>

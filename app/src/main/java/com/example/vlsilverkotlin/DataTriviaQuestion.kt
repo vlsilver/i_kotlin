@@ -2,7 +2,7 @@ package com.example.vlsilverkotlin
 
 data class Question(val text: String, val answers: List<String>)
 
-public val question: MutableList<Question> = mutableListOf(
+val question: MutableList<Question> = mutableListOf(
     Question(
         text = "What is Android Jetpack?",
         answers = listOf("All of these", "Tools", "Documentation", "Libraries")
