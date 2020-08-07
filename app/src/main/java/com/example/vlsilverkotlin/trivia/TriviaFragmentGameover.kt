@@ -1,4 +1,4 @@
-package com.example.vlsilverkotlin
+package com.example.vlsilverkotlin.trivia
 
 import android.content.Context
 import android.content.Intent
@@ -10,6 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.example.vlsilverkotlin.R
+import com.example.vlsilverkotlin.trivia.TriviaFragmentGameoverArgs
+import com.example.vlsilverkotlin.trivia.TriviaFragmentGameoverDirections
+import com.example.vlsilverkotlin.trivia.TriviaFragmentGamewonArgs
 import com.example.vlsilverkotlin.databinding.TriviaFragmentGameoverBinding
 
 class TriviaFragmentGameover : Fragment() {
@@ -19,9 +23,13 @@ class TriviaFragmentGameover : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<TriviaFragmentGameoverBinding>(
-            inflater, R.layout.trivia_fragment_gameover, container, false
+            inflater,
+            R.layout.trivia_fragment_gameover, container, false
         )
-            val args = TriviaFragmentGameoverArgs.fromBundle(arguments!!)
+            val args =
+                TriviaFragmentGameoverArgs.fromBundle(
+                    requireArguments()
+                )
             binding.tryAgainButton.setOnClickListener {
                 hideKeyboard()
                 if (binding.editTextNumQuestions.text.isNotEmpty()) {
@@ -48,7 +56,10 @@ class TriviaFragmentGameover : Fragment() {
         }
 
         private fun shareAction(): Intent {
-            val dataShare = TriviaFragmentGamewonArgs.fromBundle(arguments!!)
+            val dataShare =
+                TriviaFragmentGamewonArgs.fromBundle(
+                    arguments!!
+                )
             val shareIntent = Intent(Intent.ACTION_SEND)
             shareIntent.setType("text/plain").putExtra(
                 Intent.EXTRA_TEXT,

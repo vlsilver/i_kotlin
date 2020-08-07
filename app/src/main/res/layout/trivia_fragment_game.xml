@@ -4,13 +4,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.vlsilverkotlin.TriviaFragmentGame">
+    tools:context="com.example.vlsilverkotlin.trivia.TriviaFragmentGame">
 
     <data>
 
         <variable
             name="game"
-            type="com.example.vlsilverkotlin.TriviaFragmentGame" />
+            type="com.example.vlsilverkotlin.trivia.TriviaFragmentGame" />
     </data>
 
     <ScrollView

@@ -1,4 +1,4 @@
-package com.example.vlsilverkotlin
+package com.example.vlsilverkotlin.diceroller
 
 import android.content.Context
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.example.vlsilverkotlin.R
 import com.example.vlsilverkotlin.databinding.DicerollerFragmentBinding
 
 const val KEY_DICEROLLER_IMG1 = "key_diceroller_img1"
@@ -35,7 +36,7 @@ class DicerollerFragment : Fragment() {
         binding.btRollSum2.setOnClickListener {
             if (binding.edt1.text.isNotEmpty()) {
                 sum = binding.edt1.text.toString().toInt()
-                if ((sum >= 2*dicerollerData[0].num) and (sum <= 2*dicerollerData[(dicerollerData.size - 1)].num)) {
+                if ((sum >= 2* dicerollerData[0].num) and (sum <= 2* dicerollerData[(dicerollerData.size - 1)].num)) {
                     val dicerollerDataShuffled = dicerollerData.shuffled()
                     for (item1 in dicerollerDataShuffled) {
                         val num2 = sum - item1.num -1

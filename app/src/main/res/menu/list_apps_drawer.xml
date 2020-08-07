@@ -21,4 +21,8 @@
         android:id="@+id/dessertClickFragment"
         android:icon="@drawable/ic_android_black_24dp"
         android:title="@string/dessert_click_app" />
+    <item
+        android:id="@+id/guessthewordFragmentTitle"
+        android:icon="@android:drawable/ic_lock_lock"
+        android:title="@string/name_guesstheword_app" />
 </menu>

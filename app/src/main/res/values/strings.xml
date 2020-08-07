@@ -3,10 +3,14 @@
     <string name="name_myself">About myself</string>
     <string name="name_diceroller_app">Diceroller App</string>
     <string name="name_mymycolor_app">MymyColor App</string>
-    <string name="name_trivia_app">Trivia Apps</string>
+    <string name="name_trivia_app">Trivia App</string>
     <string name="name_about_myapp">"Hello!"
-        "\n\n\n   This application was created based on my knowledge during the course of learning about course: Android Kotlin Fundamentals codelabs, it is great for a beginner to programming."
-        "\n\n   If you want to know about me and my little apps, which have been adapted to my liking, it won't be like the course apps."
+        "\n\n\n   This application was created based on my knowledge during learning about course:"
+        "Android Kotlin Fundamentals codelabs, which great for a beginner to programming"
+        "\n\n   For each lesson I create an app, all of the apps are on the hidden menu bar on the"
+        "left side of the screen. Each application will have instructions on how to play and the"
+       "knowledge to be used. On the other hand, these applications have some improvements over the"
+        "program's applications."
         "\nPlease check in the menu on the left."
         "\n\n\nThank you! Have a good time!"</string>
 
@@ -43,7 +47,7 @@
     <string name="bt_update_2">UP</string>
     <string name="name_text_note_2">Do you want updates this name?</string>
     <string name="name_bt_no_2">N0!</string>
-    <string name="about_text">Android Trivia will help remind you of important concepts you have learned and will learn in Android development.
+    <string name="trivia_about_text">Android Trivia will help remind you of important concepts you have learned and will learn in Android development.
         \n\nConsider modifying the questions and graphics to make this game your own!</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
@@ -137,7 +141,6 @@
     <string name="rules_text">Select the answer from the options given. Each time you get an answer correct, you advance to the next question.
         \n\nIf you get the answer wrong, your game ends! You can return to the title screen using up or back from within the game screen, and this will also end your game.
     </string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="name_submit_button_trivia">Submit</string>
     <string name="try_again">Try Again?</string>
@@ -153,4 +156,24 @@
     <string name="dessert_sold">Desserts Sold</string>
     <string name="share_text">I\'ve clicked %1$d Desserts for a total of %2$d$ #AndroidDessertClicker</string>
     <string name="sharing_not_available">Sharing Not Available</string>
+
+    <string name="dessert_revenue_format">%d</string>
+    <string name="dessert_amount_format">%d pieces</string>
+
+
+    <string name="guess_app_name">Guess the Word</string>
+    <string name="guess_skip">Skip</string>
+    <string name="guess_play_again">Play Again</string>
+    <string name="guess_you_scored">You Scored</string>
+    <string name="guess_title_text">Guess the word!</string>
+    <string name="guess_play_button">Play</string>
+    <string name="guess_get_ready">Get ready to</string>
+    <string name="guess_got_it">Got it</string>
+    <string name="guess_end_game">End game</string>
+    <string name="guess_word_is">The word is…</string>
+    <string name="name_guesstheword_app">Guess The Word App</string>
+    <string name="guess_button_play_again">PLAY AGAIN</string>
+    <string name="guess_quote_format">\"%s\"</string>
+    <string name="guess_score_format">Current Score: %d</string>
+
 </resources>

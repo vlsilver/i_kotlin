@@ -1,4 +1,4 @@
-package com.example.vlsilverkotlin
+package com.example.vlsilverkotlin.trivia
 
 import android.content.Context
 import android.content.Intent
@@ -10,6 +10,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.example.vlsilverkotlin.R
+import com.example.vlsilverkotlin.trivia.TriviaFragmentGamewonArgs
+import com.example.vlsilverkotlin.trivia.TriviaFragmentGamewonDirections
 import com.example.vlsilverkotlin.databinding.TriviaFragmentGamewonBinding
 
 class TriviaFragmentGamewon : Fragment() {
@@ -20,9 +23,13 @@ class TriviaFragmentGamewon : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = DataBindingUtil.inflate<TriviaFragmentGamewonBinding>(
-            inflater, R.layout.trivia_fragment_gamewon, container, false
+            inflater,
+            R.layout.trivia_fragment_gamewon, container, false
         )
-        val args = TriviaFragmentGamewonArgs.fromBundle(arguments!!)
+        val args =
+            TriviaFragmentGamewonArgs.fromBundle(
+                requireArguments()
+            )
         binding.nextMatchButton.setOnClickListener {
             hideKeyboard()
             if (binding.editTextNumQuestions.text.isNotEmpty()) {
@@ -48,7 +55,10 @@ class TriviaFragmentGamewon : Fragment() {
     }
 
     private fun shareIntent(): Intent {
-        val dataShare = TriviaFragmentGamewonArgs.fromBundle(arguments!!)
+        val dataShare =
+            TriviaFragmentGamewonArgs.fromBundle(
+                requireArguments()
+            )
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain").putExtra(
             Intent.EXTRA_TEXT,
@@ -60,7 +70,7 @@ class TriviaFragmentGamewon : Fragment() {
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.share_menu, menu)
-        if (null == shareIntent().resolveActivity(activity!!.packageManager)) {
+        if (null == shareIntent().resolveActivity(requireActivity().packageManager)) {
             menu.findItem(R.id.share).isVisible = false
         }
     }

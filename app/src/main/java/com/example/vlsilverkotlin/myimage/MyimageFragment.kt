@@ -1,4 +1,4 @@
-package com.example.vlsilverkotlin
+package com.example.vlsilverkotlin.myimage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.example.vlsilverkotlin.R
 import com.example.vlsilverkotlin.databinding.MyimageFragmentBinding
 
 const val KEY_IMGID = "key_imgid"

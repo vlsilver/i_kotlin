@@ -1,4 +1,4 @@
-package com.example.vlsilverkotlin
+package com.example.vlsilverkotlin.trivia
 
 import android.content.Context
 import android.os.Bundle
@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.example.vlsilverkotlin.R
 import com.example.vlsilverkotlin.databinding.TriviaFragmentTitleBinding
-import timber.log.Timber
 
 
 class TriviaFragmentTitle : Fragment() {
@@ -51,12 +51,12 @@ class TriviaFragmentTitle : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.triviaFragmentAbout -> {
-                view!!.findNavController()
+            R.id.menu_aboutApp -> {
+                requireView().findNavController()
                     .navigate(TriviaFragmentTitleDirections.actionTriviaFragmentTitleToTriviaFragmentAbout2())
             }
-            R.id.triviaFragmentRules -> {
-                view!!.findNavController()
+            R.id.menu_ruleApp -> {
+                requireView().findNavController()
                     .navigate(TriviaFragmentTitleDirections.actionTriviaFragmentTitleToTriviaFragmentRules())
             }
         }

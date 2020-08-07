@@ -1,4 +1,4 @@
-package com.example.vlsilverkotlin
+package com.example.vlsilverkotlin.trivia
 
 data class Question(val text: String, val answers: List<String>)
 

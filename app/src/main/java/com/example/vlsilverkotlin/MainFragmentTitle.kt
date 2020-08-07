@@ -5,18 +5,20 @@ import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import com.example.vlsilverkotlin.databinding.AboutFragmentTitleBinding
+import androidx.lifecycle.ViewModelProvider
+import com.example.vlsilverkotlin.databinding.AboutFragmentActivityBinding
 
 
 class MainFragmentTitle : Fragment() {
+    private var text:String = ""
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = DataBindingUtil.inflate<AboutFragmentTitleBinding>(
+        val binding = DataBindingUtil.inflate<AboutFragmentActivityBinding>(
             inflater,
-            R.layout.about_fragment_title,
+            R.layout.about_fragment_activity,
             container,
             false
         )

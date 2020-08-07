@@ -1,4 +1,4 @@
-package com.example.vlsilverkotlin
+package com.example.vlsilverkotlin.trivia
 
 import android.content.Context
 import android.os.Bundle
@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.example.vlsilverkotlin.R
+import com.example.vlsilverkotlin.trivia.TriviaFragmentAbout
 import com.example.vlsilverkotlin.databinding.TriviaFragmentAboutBinding
 
 class TriviaFragmentAbout : Fragment() {

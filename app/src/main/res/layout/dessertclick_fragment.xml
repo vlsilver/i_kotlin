@@ -6,17 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
-            name="revenue"
-            type="Integer" />
-
-        <variable
-            name="amountSold"
-            type="Integer" />
-        <variable
-            name="imageDessert"
-            type="Integer" />
+            name="dessertViewModel"
+            type="com.example.vlsilverkotlin.dessertclick.ViewModelDessertClickFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -70,7 +62,10 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src= "@drawable/cupcake" />
+            tools:src= "@drawable/cupcake"
+            app:imageResource="@{dessertViewModel.currentDessertClick.imgId}"
+
+            android:onClick="@{()->dessertViewModel.onClickDessert()}"/>
 
         <!-- Code for white box at the bottom, using ShapeDrawable defined in the drawable folder -->
 
@@ -91,7 +86,7 @@
             android:id="@+id/revenue_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text='@{"$" + revenue.toString()}'
+            android:text="@{@string/dessert_revenue_format(dessertViewModel.revenue)}"
             android:textColor="#000000"
             android:textSize="@dimen/large_text_size"
             app:layout_constraintBottom_toTopOf="@+id/margin_bottom_guide"
@@ -117,7 +112,7 @@
             android:layout_marginBottom="@dimen/default_spacing"
             android:fontFamily="sans-serif-medium"
             android:paddingTop="@dimen/default_spacing"
-            android:text="@{amountSold.toString()}"
+            android:text="@{@string/dessert_amount_format(dessertViewModel.dessertSold)}"
             android:textColor="#000000"
             android:textSize="@dimen/medium_text_size"
             app:layout_constraintBottom_toTopOf="@+id/revenue_text"

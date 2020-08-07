@@ -22,11 +22,11 @@ class MainActivity : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
+        supportActionBar?.title = "My App"
         drawerLayout = binding.drawerLayout
         val nav = this.findNavController(R.id.myFragment)
         NavigationUI.setupWithNavController(binding.menuDrawer, nav)
         NavigationUI.setupActionBarWithNavController(this, nav, drawerLayout)
-        supportActionBar?.title = "My App"
     }
 
 //    override fun onSaveInstanceState(outState: Bundle) {

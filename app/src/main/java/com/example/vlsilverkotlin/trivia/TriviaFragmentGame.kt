@@ -1,4 +1,4 @@
-package com.example.vlsilverkotlin
+package com.example.vlsilverkotlin.trivia
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.example.vlsilverkotlin.*
 import com.example.vlsilverkotlin.databinding.TriviaFragmentGameBinding
 
 class TriviaFragmentGame : Fragment() {
@@ -25,7 +26,9 @@ class TriviaFragmentGame : Fragment() {
             container,
             false
         )
-        val args = TriviaFragmentGameArgs.fromBundle(arguments!!)
+        val args = TriviaFragmentGameArgs.fromBundle(
+            requireArguments()
+        )
         randomQuestion()
         setQuestion()
         binding.game = this
@@ -72,7 +75,9 @@ class TriviaFragmentGame : Fragment() {
         currentQuestion = question[questionIndex]
         answers = currentQuestion.answers.toMutableList()
         answers.shuffle()
-        val args = TriviaFragmentGameArgs.fromBundle(arguments!!)
+        val args = TriviaFragmentGameArgs.fromBundle(
+            requireArguments()
+        )
         (activity as AppCompatActivity).supportActionBar?.title =
             getString(R.string.title_android_trivia_question, questionIndex + 1, args.numQuestion)
     }
