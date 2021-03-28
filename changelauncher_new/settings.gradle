@@ -1,0 +1,2 @@
+rootProject.name='changelauncher_new'
+include ':app'
